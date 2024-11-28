@@ -1,3 +1,4 @@
+import 'package:ecommerce_ui_app/screens/auth/forgot_password_page.dart';
 import 'package:ecommerce_ui_app/screens/auth/register_page.dart';
 import 'package:ecommerce_ui_app/screens/home/home_page.dart';
 import 'package:ecommerce_ui_app/screens/onboarding/plash_screen_view.dart';
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
         '/' : (context)=> const IntroScreen(),
         '/login': (context) => const LoginPage(),
         '/register': (context) => const RegisterPage(),
+        '/forgotPassword': (context) => const ForgotPasswordPage(),
         '/started': (context) => const StartedView(),
         '/home': (context) => const HomePage(),
         '/plashScreen': (context) => const PlashScreenView(),

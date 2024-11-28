@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../../common/widgets/components/banner_title.dart';
-import '../../common/widgets/components/bottom_menu.dart';
-import '../../common/widgets/components/category_view.dart';
-import '../../common/widgets/components/product_view.dart';
+import '../../common/widgets/banner_title.dart';
+import '../../common/widgets/bottom_menu.dart';
+import '../../common/widgets/category_view.dart';
+import '../../common/widgets/product_view.dart';
+
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

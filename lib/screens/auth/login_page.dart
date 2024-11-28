@@ -1,7 +1,9 @@
-import 'package:ecommerce_ui_app/common/widgets/components/custom_button.dart';
-import 'package:ecommerce_ui_app/common/widgets/components/custom_square.dart';
-import 'package:ecommerce_ui_app/common/widgets/components/custom_textfield.dart';
+
 import 'package:flutter/material.dart';
+
+import '../../common/components/custom_button.dart';
+import '../../common/components/custom_square.dart';
+import '../../common/components/custom_textfield.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -58,13 +60,18 @@ class _LoginPageState extends State<LoginPage> {
                   // forgot password
                   Align(
                     alignment: Alignment.centerRight,
-                    child: Text(
-                      "Forgot password?",
-                      style: TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.pink,
-                        fontFamily: 'Montserrat',
+                    child: GestureDetector(
+                      onTap: () => {
+                        Navigator.pushNamed(context, '/forgotPassword')
+                      },
+                      child: Text(
+                        "Forgot password?",
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.pink,
+                          fontFamily: 'Montserrat',
+                        ),
                       ),
                     ),
                   ),

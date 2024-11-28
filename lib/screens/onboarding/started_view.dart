@@ -1,5 +1,6 @@
-import 'package:ecommerce_ui_app/common/widgets/components/custom_button.dart';
 import 'package:flutter/material.dart';
+
+import '../../common/components/custom_button.dart';
 
 class StartedView extends StatefulWidget {
   const StartedView({super.key});

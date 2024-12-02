@@ -9,10 +9,7 @@ final categories = [
     title: "Mens",
     imagePath: "assets/images/man_logo.png",
   ),
-  CategoryInfo(
-    title: "Women",
-    imagePath: "assets/images/woman_logo.png",
-  ),
+
   CategoryInfo(
     title: "Fashion",
     imagePath: "assets/images/fashion_logo.png",

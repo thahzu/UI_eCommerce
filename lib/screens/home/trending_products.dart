@@ -1,26 +1,15 @@
+import 'package:ecommerce_ui_app/common/widgets/product_view.dart';
+import 'package:ecommerce_ui_app/common/widgets/product_view_trending.dart';
 import 'package:flutter/material.dart';
 
-import '../../common/widgets/banner_title.dart';
-import '../../common/widgets/bottom_menu.dart';
-import '../../common/widgets/category_view.dart';
-import '../../common/widgets/product_view.dart';
-
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class TrendingProducts extends StatefulWidget {
+  const TrendingProducts({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<TrendingProducts> createState() => _TrendingProductsState();
 }
 
-class _HomePageState extends State<HomePage> {
-  int selectedIndex = 0;
-
-  void handleItemSelected(int index) {
-    setState(() {
-      selectedIndex = index;
-    });
-  }
-
+class _TrendingProductsState extends State<TrendingProducts> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -111,7 +100,7 @@ class _HomePageState extends State<HomePage> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 const Text(
-                  "All Featured",
+                  "52,082+ Items",
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
@@ -165,43 +154,9 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
 
-            // Categories
-            const CategoryView(),
-
-            // Deal of the Day Section
-            BannerTitle(
-              color: Colors.blue,
-              title: "Deal of the Day",
-              timer: "22h 55m 20s remaining",
-              buttonText: "View all",
-              icon: Icons.lock_clock,
-              onViewAll: () {
-                Navigator.pushNamed(context, '/trending');
-              },
-            ),
-            const SizedBox(height: 15),
-
-            // product
-            const ProductView(),
-
-            // Trending product
-            const SizedBox(height: 16),
-            BannerTitle(
-              color: Colors.pink,
-              title: "Trending product",
-              timer: "Last day 28/11/2024",
-              buttonText: "View all",
-              icon: Icons.calendar_month,
-              onViewAll: () => {Navigator.pushNamed(context, '/trending')},
-            ),
-            const SizedBox(height: 15),
-            const ProductView(),
+            const ProductViewTrending(),
           ],
         ),
-      ),
-      bottomNavigationBar: BottomMenu(
-        selectedIndex: selectedIndex,
-        onItemSelected: handleItemSelected,
       ),
     );
   }

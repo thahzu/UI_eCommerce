@@ -1,8 +1,10 @@
 import 'package:ecommerce_ui_app/screens/auth/forgot_password_page.dart';
 import 'package:ecommerce_ui_app/screens/auth/register_page.dart';
 import 'package:ecommerce_ui_app/screens/home/home_page.dart';
+import 'package:ecommerce_ui_app/screens/home/trending_products.dart';
 import 'package:ecommerce_ui_app/screens/onboarding/plash_screen_view.dart';
 import 'package:ecommerce_ui_app/screens/onboarding/started_view.dart';
+import 'package:ecommerce_ui_app/screens/profile/profile_page.dart';
 import 'package:flutter/material.dart';
 
 import 'screens/auth/login_page.dart';
@@ -28,6 +30,8 @@ class MyApp extends StatelessWidget {
         '/started': (context) => const StartedView(),
         '/home': (context) => const HomePage(),
         '/plashScreen': (context) => const PlashScreenView(),
+        '/profile':(context)  => const ProfilePage(),
+        '/trending': (context) => const TrendingProducts(),
       },
     );
   }
